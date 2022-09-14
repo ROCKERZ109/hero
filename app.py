@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def home():
     d = {}
-    inputchr = str(request.args['query'])
+    inputchr = str(request.args['queri'])
     ints = chatbot.predict_class(inputchr)
     answer = chatbot.get_response(ints, chatbot.intents)
     d['output'] = answer
